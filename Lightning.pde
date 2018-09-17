@@ -12,14 +12,14 @@ void setup() {
   mainStartX = random(0, 500);
   mainStartY = 0.0;
   if(mainStartX < 5 || mainStartX > 495) {
-    mainStartY = random(0,100);
+    mainStartY = (int)Math.random()*100;
   }
   mainEndX = mainStartX;
   mainEndY = mainStartY;
 }
 
 void drawLightningBolt(float startX, float startY, float endX, float endY, boolean main, int lifeTime) {
-  strokeWeight(random(3,7));
+  strokeWeight((int)(Math.random()*4)+3);
   int mainDirection = 1;
   if(mainStartX > 250) {
     mainDirection = -1;
@@ -72,7 +72,7 @@ void drawLightning() {
   previousY.clear();
 }
 void draw() {
-  fill(0,0,0,5)
+  fill(0,0,0,5);
   rect(0,0,500,500);
   drawLightning();
 }
