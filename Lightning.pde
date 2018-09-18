@@ -65,7 +65,6 @@ void drawLightning() {
   mainEndY = mainStartY;
   drawLightningBolt(mainStartX, mainStartY, mainEndX, mainEndY, true, 1); 
   for(int i=0;i<(int)(Math.random()*5)+5;i++) {
-    // int index = int(random(0 + int(previousX.size() * 0.2),previousX.size()-1));
     int index = (int)(Math.random()*int(previousX.size()-1)-int(previousX.size() * 0.2)) + int(previousX.size() * 0.2);
     drawLightningBolt(previousX.get(index), previousY.get(index), previousX.get(index), previousY.get(index), false, (int)(Math.random()*10) + 15 - (i + 1));
   }
